@@ -9,9 +9,9 @@
 MSC <- function(df){
 
 # CPUE per site/sampling occasion
-Tot_CPUE <- rowsum(df)
+Tot_CPUE <- rowSums(df)
 
-mean_Tot_CPUE <- colMeans(Tot_CPUE)
+mean_Tot_CPUE <- mean(Tot_CPUE)
 
 MGMS <- df / mean_Tot_CPUE
 return(MGMS)
